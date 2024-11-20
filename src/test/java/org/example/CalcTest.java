@@ -4,13 +4,14 @@ import org.junit.jupiter.api.*;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class CalcTest {
     @BeforeAll
     public static void startOfTests(){
         System.out.println("Начало прогона тестов");
     }
+
+
+
 
     @ParameterizedTest(name = "№{index} - сложение {0} и {1}, ожидаемый результат {2}")
     @CsvSource({"2, 5, 7", "2, 5, 8", "3, 10, 13"})
@@ -22,6 +23,8 @@ class CalcTest {
         Assertions.assertEquals(expected, ressultSum, "Не работает");
 
     }
+
+
 
     @ParameterizedTest(name = "№{index} - вычитание {0} и {1}, ожидаемый результат {2}")
     @CsvSource({"7, 2, 5", "2, 5, 8", "13, 10, 3"})
