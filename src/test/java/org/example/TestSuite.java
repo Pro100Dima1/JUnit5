@@ -9,5 +9,3 @@ import org.junit.platform.suite.api.Suite;
 @IncludeTags("summ")
 public class TestSuite {
 }
-
-
