@@ -18,7 +18,6 @@ class CalcTest {
         Calc calcSumm = new Calc();
         int ressultSum = calcSumm.summation(firstTerm, secondTerm);
         Assertions.assertEquals(expected, ressultSum, "Не работает");
-
     }
 
     @ParameterizedTest(name = "№{index} - вычитание {0} и {1}, ожидаемый результат {2}")
