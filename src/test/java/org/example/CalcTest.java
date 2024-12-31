@@ -29,7 +29,6 @@ class CalcTest {
         Calc calcSub = new Calc();
         int ressultSub = calcSub.subtraction(firstTerm, secondTerm);
         Assertions.assertEquals(expected, ressultSub, "Не работает");
-
     }
 
     @AfterAll
