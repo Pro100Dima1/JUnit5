@@ -12,5 +12,4 @@ public class Calc {
         resOfSubtraction = firstTerm - secondTerm;
         return resOfSubtraction;
     }
-
 }
