@@ -34,5 +34,4 @@ class CalcTest {
     public static void endOfTests() {
         System.out.println("Конец прогона тестов");
     }
-
 }
