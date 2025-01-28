@@ -2,6 +2,7 @@ package org.example;
 
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvFileSource;
 import org.junit.jupiter.params.provider.CsvSource;
 
 class CalcTest {
@@ -25,6 +26,17 @@ class CalcTest {
     @DisplayName("Проверка работы вычитания калькулятора")
     @Tag("sub")
     void testForSubtraction(int firstTerm, int secondTerm, int expected) {
+        Calc calcSub = new Calc();
+        int ressultSub = calcSub.subtraction(firstTerm, secondTerm);
+        Assertions.assertEquals(expected, ressultSub, "Не работает");
+    }
+
+
+    @CsvFileSource(resources = "/testData.csv")
+    @ParameterizedTest(name = "№{index} - вычитание {0} и {1}, ожидаемый результат {2}")
+    @DisplayName("Проверка работы вычитания калькулятора")
+    @Tag("sub")
+     void csvFileTestForSubtraction(int firstTerm, int secondTerm, int expected) {
         Calc calcSub = new Calc();
         int ressultSub = calcSub.subtraction(firstTerm, secondTerm);
         Assertions.assertEquals(expected, ressultSub, "Не работает");
